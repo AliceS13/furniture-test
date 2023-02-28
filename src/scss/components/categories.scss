@@ -1,0 +1,203 @@
+.categories {
+    margin-bottom: 100px;
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 87px;
+        padding: 0 109px;
+
+        @media (max-width: 1362px) {
+            padding: 0;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+
+    &__item {
+        font-family: 'Proxima Nova Bold';
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 125%;
+        text-align: center;
+        justify-content: center;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+
+        svg {
+            margin: 0 auto;
+        }
+
+        svg path {
+            transition: 0.3s;
+        }
+
+        &:hover {
+            svg path {
+                fill: #44C697;
+            }
+
+            span {
+
+                &::after {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        span {
+            margin-top: 10px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -3px;
+                width: 100%;
+                height: 3px;
+                background: #44C697;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.3s;
+            }
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px 30px;
+        margin-bottom: 50px;
+
+        @media (max-width: 1362px) {
+            padding: 0;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__card {
+        position: relative;
+
+        &:hover {
+            transform: translateY(-30px);
+            transition: 0.3s;
+
+            .categories__card-bottom {
+                background-color: #44C697;
+            }
+
+            .categories__card-title {
+                color: #fff;
+            }
+            
+            .categories__card-price {
+                color: #fff;
+            }
+        }
+    }
+
+    &__card-baige {
+        position: absolute;
+        font-family: 'Proxima Nova Bold';
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 125%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        top: 10px;
+        left: 0;
+        padding: 5px 15px;
+        background: #1E2E36;
+
+        &.red {
+            background: #FF1B1B;
+            top: 48px;
+        }
+    }
+
+    &__card-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: 0.3s;
+        padding: 20px 15px 15px;
+        background-position: bottom;
+
+        @media (max-width: 1362px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+    }
+
+    &__card-img {
+        margin-bottom: -10px;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+        }
+    }
+
+    &__card-prices {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__card-title {
+        font-family: 'Proxima Nova Bold';
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 125%;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__card-price {
+        font-family: 'Proxima Nova Bold';
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 125%;
+        text-transform: uppercase;
+
+        &.new {
+            color: #FF1B1B;
+        }
+
+        &.old {
+            font-size: 18px;
+            text-decoration-line: line-through;
+            color: #BCBDBB;
+            margin-left: 10px;
+        }
+    }
+
+    &__btn {
+        width: fit-content;
+        margin: 0 auto;
+    }
+}

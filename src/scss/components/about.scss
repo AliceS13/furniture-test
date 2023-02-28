@@ -1,0 +1,54 @@
+.about {
+    margin-bottom: 100px;
+
+    &__container {
+        position: relative;
+        padding: 100px 0;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__content {
+        background: #FFFFFF;
+        padding: 50px 30px 50px 50px;
+        position: relative;
+        max-width: 791px;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: -15px;
+            top: 0;
+            height: 100%;
+            width: 15px;
+            background-color: #44C697;
+        }
+
+        strong {
+            color: #44C697;
+            font-family: 'Proxima Nova Bold';
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 125%;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 125%;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &__img {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}

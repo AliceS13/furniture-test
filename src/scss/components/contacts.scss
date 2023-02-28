@@ -1,0 +1,90 @@
+.contacts {
+    margin-bottom: 109px;
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__container {
+        position: relative;
+        padding: 100px 0;
+    }
+
+    &__image {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &__form {
+        position: relative;
+        z-index: 1;
+        width: 513px;
+        background: #FFFFFF;
+        padding: 50px 50px 50px 30px;
+        margin-left: auto;
+
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -15px;
+            top: 0;
+            width: 15px;
+            background: #44C697;
+            height: 100%;
+        }
+    }
+
+    &__form-title {
+        font-family: 'Proxima Nova Bold';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 125%;
+        margin-bottom: 30px;
+    }
+
+    &__form-input {
+        width: 100%;
+        height: 51px;
+        border: 1px solid #1E2E36;
+        border-radius: 3px;
+        padding: 0 15px;
+        font-size: 18px;
+        line-height: 125%;
+        color: #1E2E36;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+
+        &::placeholder {
+            font-size: 18px;
+            line-height: 125%;
+            color: rgba(30, 46, 54, 0.6);
+        }
+    }
+
+    &__form-items {
+        margin-bottom: 15px;
+    }
+
+    &__form-btn {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    &__form-text {
+        font-size: 18px;
+        line-height: 125%;
+
+        span {
+            font-family: 'Proxima Nova Bold';
+        }
+    }
+}

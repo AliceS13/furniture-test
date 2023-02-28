@@ -1,0 +1,171 @@
+.main {
+    position: relative;
+    margin-bottom: 100px;
+
+    &__bg {
+        @media (max-width: 1770px) {
+            height: 715px;
+        }
+
+        img {
+            @media (max-width: 1770px) {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .container {
+        position: relative;
+    }
+
+    &__content {
+        position: absolute;
+        left: 51px;
+        top: 0;
+        width: 462px;
+    }
+
+    .paging-info {
+        position: absolute;
+        bottom: 136px;
+        font-family: 'Proxima Nova Bold';
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 125%;
+        text-align: center;
+        text-transform: uppercase;
+        left: calc(50% - 41px);
+
+        @media (max-width: 1362px) {
+            bottom: 100px;
+        }
+
+        .curr-slide {
+            font-family: 'Proxima Nova Bold';
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 125%;
+        }
+    }
+
+    &__slider {
+        width: 462px;
+
+        .slick-arrow {
+            position: absolute;
+            bottom: 101px;
+            z-index: 1;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid #1E2E36;
+            font-size: 0;
+            background: #1E2E36;
+
+            @media (max-width: 1362px) {
+                bottom: 65px;
+            }
+
+            &::before {
+                background: url("../img/icons/chevron-left.svg") center no-repeat;
+            }
+
+
+            &.slick-disabled {
+                background-color: #fff;
+
+                &::before {
+                    background: url("../img/icons/chevron-right.svg") center no-repeat;
+                }
+
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .slick-prev {
+            left: calc(50% - 34px);
+
+
+
+            &::before {
+                left: -2px;
+                top: -1px;
+                transform: rotate(90deg);
+            }
+        }
+
+        .slick-next {
+            right: calc(50% - 34px);
+
+            &::before {
+                top: -1px;
+                right: -2px;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+
+    &__card {
+        background: #FFFFFF;
+        width: 462px;
+        height: 670px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+
+        @media (max-width: 1362px) {
+            height: 550px;
+        }
+        
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -15px;
+            left: 0;
+            width: 15px;
+            height: 100%;
+            background: #44C697;
+        }
+    }
+
+    &__title {
+        font-family: 'Proxima Nova Bold';
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 100%;
+        margin-bottom: 50px;
+        margin-top: 99px;
+
+        @media (max-width: 1362px) {
+            margin-top: 40px;
+            font-size: 50px;
+        }
+    }
+
+    &__subtitle {
+        font-family: 'Proxima Nova Bold';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 125%;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-size: 36px;
+        line-height: 125%;
+        margin-bottom: 30px;
+    }
+}
