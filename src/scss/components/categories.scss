@@ -1,6 +1,10 @@
 .categories {
     margin-bottom: 100px;
 
+    @media (max-width: 425px) {
+       margin-bottom: 50px;
+    }
+
     &__title {
         margin-bottom: 50px;
     }
@@ -91,6 +95,11 @@
         @media (max-width: 768px) {
             grid-template-columns: 1fr;
         }
+
+        @media (max-width: 425px) {
+            margin-bottom: 25px;
+            gap: 20px;
+        }
     }
 
     &__card {
@@ -175,6 +184,10 @@
         line-height: 125%;
         text-align: center;
         text-transform: uppercase;
+
+        @media (max-width: 425px) {
+            font-size: 20px;
+        }
     }
 
     &__card-price {
@@ -183,6 +196,10 @@
         font-size: 24px;
         line-height: 125%;
         text-transform: uppercase;
+
+        @media (max-width: 425px) {
+            font-size: 20px;
+        }
 
         &.new {
             color: #FF1B1B;

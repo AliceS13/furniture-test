@@ -2,6 +2,11 @@
     margin-top: 100px;
     margin-bottom: 100px;
 
+    @media (max-width: 425px) {
+        margin-top: 0px;
+        margin-bottom: 50px;
+    }
+
     &__title {
         margin-bottom: 52px;
     }
@@ -53,7 +58,7 @@
         padding: 30px;
         transform: translateY(42%);
         transition: 0.3s ease;
-        
+
         @media (max-width: 1300px) {
             transform: translateY(50%);
         }
@@ -71,6 +76,10 @@
         color: #FFFFFF;
         position: relative;
         width: fit-content;
+
+        @media (max-width: 425px) {
+            font-size: 24px;
+        }
 
         &::after {
             content: "";
@@ -105,6 +114,10 @@
         border: 1px solid #fff;
         font-size: 0;
         background: #fff;
+
+        @media (max-width: 425px) {
+            top: 30px;
+        }
 
         &::before {
             background: url("../img/icons/chevron-right.svg") center no-repeat;

@@ -2,6 +2,11 @@
     position: relative;
     margin-bottom: 100px;
 
+    @media (max-width: 425px) {
+
+        margin-bottom: 50px;
+    }
+
     &__bg {
         @media (max-width: 1770px) {
             height: 715px;
