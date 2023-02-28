@@ -66,6 +66,10 @@
         @media (max-width: 768px) {
             transform: none;
         }
+        
+        @media (max-width: 425px) {
+            padding: 20px;
+        }
     }
 
     &__item-title {
