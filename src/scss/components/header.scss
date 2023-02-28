@@ -52,6 +52,10 @@
             transition: 0.3s ease;
             display: flex;
             flex-direction: column;
+
+            @media (max-width: 450px) {
+                width: calc(100vw - 40px);
+            }
         }
 
         &__close {
@@ -297,7 +301,16 @@
         @media (max-width: 1362px) {
             width: 300px;
             left: calc(50% - 150px);
+        }
 
+        @media (max-width: 540px) {
+            width: 200px;
+            left: calc(50% - 100px);
+        }
+
+        @media (max-width: 320px) {
+           width: 180px;
+            left: calc(50% - 90px);
         }
     }
 
@@ -310,6 +323,7 @@
         display: flex;
         align-items: center;
         margin-right: 30px;
+        cursor: pointer;
 
         @media (max-width: 1362px) {
             margin-right: 0;
