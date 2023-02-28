@@ -93,4 +93,9 @@ button {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+
+    @media (max-width: 425px) {
+        font-size: 34px;
+        line-height: 100%;
+    }
 }
